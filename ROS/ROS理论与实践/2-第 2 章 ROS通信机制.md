@@ -662,8 +662,6 @@ int main(int argc, char *argv[])
         ros::spinOnce();
     }
 
-
-
     return 0;
 }
 ```
@@ -2419,7 +2417,7 @@ int main(int argc, char *argv[])
 
 **实现方案B:** Python
 
-```py
+```python
 #! /usr/bin/env python
 """
     编写 ROS 节点，控制小乌龟画圆
@@ -2528,7 +2526,7 @@ rostopic list
 
 **获取消息类型:**turtlesim/Pose
 
-```
+```bash
 rostopic type  /turtle1/pose
 ```
 
