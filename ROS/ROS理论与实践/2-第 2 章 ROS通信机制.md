@@ -2259,7 +2259,7 @@ rosparam list    列出所有参数
 
     从外部文件加载参数
 
-    ```shell
+    ```bash
     rosparam load xxx.yaml
     ```
 
@@ -2267,7 +2267,7 @@ rosparam list    列出所有参数
 
     将参数写出到外部文件
 
-    ```shell
+    ```bash
     rosparam dump yyy.yaml
     ```
 
