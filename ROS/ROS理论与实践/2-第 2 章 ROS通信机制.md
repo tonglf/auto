@@ -709,7 +709,7 @@ add_executable(person_talker src/person_talker.cpp)
 add_executable(person_listener src/person_listener.cpp)
 
 
-
+# 顺序严格，add_executable 要在 add_dependencies 前定义
 add_dependencies(person_talker ${PROJECT_NAME}_generate_messages_cpp)
 add_dependencies(person_listener ${PROJECT_NAME}_generate_messages_cpp)
 
