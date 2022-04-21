@@ -1098,8 +1098,6 @@ bool doReq(demo03_server_client::AddInts::Request& req,
     //如果没有异常，那么相加并将结果赋值给 resp
     resp.sum = num1 + num2;
     return true;
-
-
 }
 
 int main(int argc, char *argv[])
