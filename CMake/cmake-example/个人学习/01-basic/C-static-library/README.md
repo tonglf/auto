@@ -2,7 +2,7 @@
 
 ## Introduction
 
-显示了一个hello world示例，该示例首先创建并链接一个静态库。这是一个简化的示例，显示了同一文件夹中的库和二进制文件。通常情况下，这些将在第02节“子项目”中所述的子项目中进行
+显示了一个 hello world 示例，该示例首先创建并链接一个静态库。这是一个简化的示例，显示了同一文件夹中的库和二进制文件。通常情况下，这些将在第02节“子项目”中所述的子项目中进行
 
 本教程中的文件如下：
 
@@ -60,7 +60,7 @@ target_include_directories(hello_library
 
 范围的含义是：
 
-* PRIVATE - 该目录被添加到此目标的include目录中
+* PRIVATE - 该目录被添加到此目标的 include 目录中
 * INTERFACE - 该目录被添加到链接此库的任何目标的包含目录中
 * PUBLIC - 如上所述，它包括在此库中，也包括链接此库的任何目标
 
@@ -93,7 +93,7 @@ target_link_libraries( hello_binary
 )
 ```
 
-这会告诉CMake在链接期间将 hello_library 与 hello_binary 二进制可执行文件链接。它还将从链接库目标传播任何具有 PUBLIC 或 INTERFACE 作用域的include目录。
+这会告诉CMake在链接期间将 hello_library 与 hello_binary 二进制可执行文件链接。它还将从链接库目标传播任何具有 PUBLIC 或 INTERFACE 作用域的 include 目录。
 
 编译器调用的一个例子是：
 

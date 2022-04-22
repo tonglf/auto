@@ -48,8 +48,6 @@ add_executable() 命令指定应从指定的源文件生成可执行文件，在
 add_executable(hello_cmake main.cpp)
 ```
 
-
-
 > [NOTE]
 >
 > 有些人使用的一种简写方法是将项目名称和可执行文件名称相同。这允许您指定 CmakeList.txt 如下：
@@ -65,12 +63,12 @@ add_executable(hello_cmake main.cpp)
 
 ### Binary Directory
 
-运行cmake命令的根文件夹或顶级文件夹称为cmake_BINARY_DIR，是所有二进制文件的根文件夹。CMake支持就地和异地构建和生成二进制文件。
+运行 cmake 命令的根文件夹或顶级文件夹称为 cmake_BINARY_DIR，是所有二进制文件的根文件夹。CMake 支持就地和异地构建和生成二进制文件。
 
 
 #### In-Place Build
 
-就地生成在与源代码相同的目录结构中生成所有临时生成文件。这意味着所有的makefile和object文件都散布在普通代码中。要创建就地构建目标，请在根目录中运行cmake命令。例如：
+就地生成在与源代码相同的目录结构中生成所有临时生成文件。这意味着所有的 makefile 和 object 文件都散布在普通代码中。要创建就地构建目标，请在根目录中运行 cmake 命令。例如：
 
 ```bash
 A-hello-cmake$ cmake .
@@ -79,7 +77,7 @@ A-hello-cmake$ cmake .
 
 #### Out-of-Source Build（推荐）
 
-源代码外版本允许您创建单个版本文件夹，该文件夹可以位于文件系统的任何位置。所有临时生成和对象文件都位于该目录中，以保持源代码树的干净。要创建源代码外构建，请在build文件夹中运行cmake命令，并将其指向根所在的目录CMakeLists.txt文件。如果你想从头开始重新创建你的cmake环境，你只需要删除你的构建目录，然后重新运行cmake。
+源代码外版本允许您创建单个版本文件夹，该文件夹可以位于文件系统的任何位置。所有临时生成和对象文件都位于该目录中，以保持源代码树的干净。要创建源代码外构建，请在 build 文件夹中运行 cmake 命令，并将其指向根所在的目录 CMakeLists.txt 文件。如果你想从头开始重新创建你的 cmake 环境，你只需要删除你的构建目录，然后重新运行 cmake。
 
 For example:
 

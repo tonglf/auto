@@ -13,7 +13,7 @@ The levels provided are:
 
 The files in this tutorial are below:
 
-```
+```bash
 $ tree
 .
 ├── CMakeLists.txt

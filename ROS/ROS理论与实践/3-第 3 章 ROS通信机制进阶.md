@@ -794,7 +794,7 @@ public:
 
 在 VScode 中，为了后续包含头文件时不抛出异常，请配置 .vscode 下 c_cpp_properties.json 的 includepath属性
 
-```
+```json
 "/home/用户/工作空间/src/功能包/include/**"
 ```
 
@@ -828,7 +828,7 @@ int main(int argc, char *argv[])
 
 配置CMakeLists.txt文件，头文件相关配置如下:
 
-```makefile
+```cmake
 include_directories(
 include
   ${catkin_INCLUDE_DIRS}
@@ -837,7 +837,7 @@ include
 
 可执行配置文件配置方式与之前一致:
 
-```makefile
+```cmake
 add_executable(hello src/hello.cpp)
 
 add_dependencies(hello ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -888,7 +888,7 @@ public:
 
 在 VScode 中，为了后续包含头文件时不抛出异常，请配置 .vscode 下 c_cpp_properties.json 的 includepath属性
 
-```
+```json
 "/home/用户/工作空间/src/功能包/include/**"
 ```
 
@@ -930,7 +930,7 @@ int main(int argc, char *argv[])
 
 头文件与源文件相关配置:
 
-```makefile
+```cmake
 include_directories(
 include
   ${catkin_INCLUDE_DIRS}
@@ -951,7 +951,7 @@ target_link_libraries(head
 
 可执行文件配置:
 
-```makefile
+```cmake
 add_executable(use_head src/use_head.cpp)
 
 add_dependencies(use_head ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})

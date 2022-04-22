@@ -2,8 +2,7 @@
 
 ## Introduction
 
-This example shows how to generate a `make install` target to install files and
-binaries on your system. This is based on the previous shared library example.
+This example shows how to generate a `make install` target to install files and binaries on your system. This is based on the previous shared library example.
 
 The files in this tutorial are below:
 
@@ -119,7 +118,7 @@ Hello Install!
 
 #### Overriding the default install location(覆盖默认安装位置)
 
-如前所述，默认安装位置是从CMAKE_install_前缀设置的，该前缀默认为/usr/local/
+如前所述，默认安装位置是从CMAKE_INSTALL_PREFIX 设置的，该前缀默认为/usr/local/
 
 如果要更改所有用户的默认位置，可以在添加任何二进制文件或库之前，将以下代码添加到顶级CmakeList.txt。
 

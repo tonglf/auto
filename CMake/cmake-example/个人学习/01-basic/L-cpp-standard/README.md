@@ -1,18 +1,11 @@
-# Basic Examples
+# C++ Standard
 
-The basic examples in this directory show how the setup a CMake project, set compile flags, create and link executables and libraries, and install them.
+Since the release of C++11 and C++14 a common use case is to invoke the compiler to use these standards. As CMake has evolved, it has added features to make this easier and new versions of CMake have changed how this is achieved.
 
-The examples included are
+The following examples show different methods of setting the C++ standard and what versions of CMake they are available from.
 
-- [hello-cmake](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/A-hello-cmake). A hello world example.
-- [hello-headers](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/B-hello-headers). A slightly more complicated hello world example, using separate source and include folders.
-- [static-library](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/C-static-library). An example using a static library.
-- [shared-library](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/D-shared-library). An example using a shared library.
-- [installing](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/E-installing). Shows how to create a 'make install' target that will install binaries and libraries.
-- [build-type](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/F-build-type). An example showing how to set a default build and optimization flags for your project.
-- [compile-flags](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/G-compile-flags). Shows how to set additional compile flags.
-- [third-party-library](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/H-third-party-library). Shows an example of how to link third party libraries.
-- [compiling-with-clang](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/I-compiling-with-clang). An example of invoking the clang compiler.
-- [building-with-ninja](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/J-building-with-ninja) - Shows how to generate ninja build files
-- [imported-targets](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/K-imported-targets) - Shows how to link boost using the new imported targets
-- [cpp-standard](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/L-cpp-standard) - Shows various methods to set the C++ standard
+The examples include:
+
+- [common-method](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/L-cpp-standard/i-common-method). A simple version that should work with most versions of CMake.
+- [cxx-standard](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/L-cpp-standard/ii-cxx-standard). Using the `CMAKE_CXX_STANDARD` variable introduced in CMake v3.1.
+- [compile-features](https://github.com/ttroy50/cmake-examples/blob/master/01-basic/L-cpp-standard/iii-compile-features). Using the `target_compile_features` function introduced in CMake v3.1.

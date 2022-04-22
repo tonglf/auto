@@ -52,8 +52,6 @@ set(SOURCES
 add_executable(${PROJECT_NAME} ${SOURCES})
 ```
 
-
-
 > [NOTE]
 >
 > 在SOURCES变量中设置特定文件名的另一种方法是使用GLOB命令使用通配符模式匹配查找文件。
@@ -62,7 +60,6 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 > file(GLOB SOURCES "src/*.cpp")
 > ```
 >
-> 
 
 > [TIP]
 >
@@ -105,7 +102,7 @@ Hello Headers!
 
 ### Verbose Output(详细输出)
 
-在前面的示例中，当运行make命令时，输出仅显示生成的状态。要查看完整输出以进行调试，可以在运行make时添加 VERBOSE=1 标志。
+在前面的示例中，当运行 make 命令时，输出仅显示生成的状态。要查看完整输出以进行调试，可以在运行 make 时添加 VERBOSE=1 标志。
 
 详细的输出显示在下面，并且对输出的检查表明，将添加目录添加到C++编译器命令中。
 
