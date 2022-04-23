@@ -88,6 +88,28 @@ cd code
 
 For more details on build and running the docker containers [dockerfiles](https://github.com/ttroy50/cmake-examples/blob/master/here).
 
+## 例子解释
+
+- 01-basic  一些基础的cmake例子。
+    - hello-cmake. A hello world example.
+    - hello-headers. 一个稍微复杂一点的hello world示例，使用单独的源代码和包含文件夹。
+    - static-library. 使用静态库的示例。
+    - shared-library. 使用共享库的示例。
+    - installing. 演示如何创建将安装二进制文件和库的“make install”目标。
+    - build-type. 演示如何为项目设置默认生成和优化标志的示例。
+    - compile-flags. 演示如何设置其他编译标志。
+    - third-party-library. 显示了如何链接第三方库的示例。
+    - compiling-with-clang. 调用clang编译器的示例。
+    - building-with-ninja. 演示如何生成 ninja 构建文件。
+    - imported-targets - 演示如何使用新导入的目标链接boost。
+    - cpp-standard - 介绍C++标准的各种设置方法。
+- 02-sub-projects  包含子文件的情况，这时父目录与子目录均有 CMakeLists.txt 文件。
+- 03-code-generation  代码生成，其对于从公共描述文件创建不同语言的源代码非常有用，使用变量或借助工具可以实现，本文只尝试了使用变量。
+- 04-static-analysis  静态分析，在不执行代码的情况下对代码进行分析。它可以用来发现常见的编程错误并执行编码准则。介绍了四种工具进行分析，本文只尝试使用了 clang-analyzer。
+- 05-unit-testing  单元测试是一个软件开发过程中应用程序的最小可测试部分，单元被单独和独立地检查是否正常运行。
+- 06-installer  
+- 07-package-management  
+
 # Other Links
 
 There are many CMake tutorials and examples online. The list below includes links to some of these which I have found helpful in my CMake journey.

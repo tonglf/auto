@@ -1,12 +1,6 @@
-= Package Management
-:toc:
-:toc-placement!:
+# Package Management
 
-toc::[]
+## Introduction
 
-[[intro]]
-Introduction
-------------
-
-For C++ and CMake there is currently no universally accepted way of managing and packaging dependencies. However, in recent years there have been some new and interesting package management systems made available. While these are separate systems to CMake, most of them have are designed to integrate directly into a CMake based build system.
+对于C++和CMake，目前没有普遍接受的管理和打包依赖关系的方法。然而，近年来出现了一些新的、有趣的软件包管理系统。虽然这些是CMake的独立系统，但它们中的大多数都被设计为直接集成到基于CMake的构建系统中。
 

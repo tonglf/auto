@@ -1,28 +1,16 @@
-= Unit Testing
+# Unit Testing
 
-:toc:
-:toc-placement!:
+## Introduction
 
-toc::[]
+单元测试是一个软件开发过程中应用程序的最小可测试部分，单元被单独和独立地检查是否正常运行。这可能涉及获取一个类、函数或算法，并编写可以运行的测试用例，以验证单元是否正常工作。
 
-[[intro]]
-Introduction
-------------
+CMake includes a tool called [CTest](https://cmake.org/Wiki/CMake/Testing_With_CTest) which allows you to enable the `make test` target to run automated tests such as unit tests.
 
-Unit testing is a software development process in which the smallest testable parts of an
-application, called units, are individually and independently scrutinized
-for proper operation. This can involve taking a class, function, or algorithm
-and writing test cases that can be run to verify that the unit is working correctly.
-
-CMake includes a tool called link:https://cmake.org/Wiki/CMake/Testing_With_CTest[CTest]
-which allows you to enable the `make test` target to run automated tests such as unit tests.
-
-There are many unit-testing frameworks available which can be used to help automate
-and ease the development of unit tests. In these examples I show how to use
-some of these frameworks and call them using the CMake testing utility CTest.
+There are many unit-testing frameworks available which can be used to help automate and ease the development of unit tests. In these examples I show how to use some of these frameworks and call them using the CMake testing utility CTest.
 
 The examples here include using the following frameworks:
 
-* http://www.boost.org/doc/libs/1_56_0/libs/test/doc/html/utf/user-guide.html[Boost Unit Test Framework]
-* https://github.com/google/googletest[Google Test - Download]
-* https://github.com/catchorg/Catch2[Catch2]
+- [Boost Unit Test Framework](http://www.boost.org/doc/libs/1_56_0/libs/test/doc/html/utf/user-guide.html)
+- [Google Test - Download](https://github.com/google/googletest)
+- [Catch2](https://github.com/catchorg/Catch2)
+

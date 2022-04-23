@@ -241,7 +241,7 @@ roslaunch 包名 xxx.launch
 ```xml
 <launch>
     <node pkg="turtlesim" type="turtlesim_node"     name="myTurtle" output="screen" >
-		<ramp from="/turtle/cmd_vel" to="cmd/vel"/>
+		<reamp from="/turtle/cmd_vel" to="cmd/vel"/>
     </node>
     <node pkg="turtlesim" type="turtle_teleop_key"  name="myTurtleContro" output="screen" />
 </launch>
@@ -524,7 +524,7 @@ rosrun turtlesim turtlesim_node __ns:=/yyy
 
 语法: rosrun 包名 节点名 __name:=新名称
 
-```shell
+```bash
 rosrun turtlesim  turtlesim_node __name:=t1 
 # 或者
 rosrun turtlesim   turtlesim_node /turtlesim:=t1(不适用于python)
