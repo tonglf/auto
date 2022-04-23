@@ -106,9 +106,9 @@ For more details on build and running the docker containers [dockerfiles](https:
 - 02-sub-projects  包含子文件的情况，这时父目录与子目录均有 CMakeLists.txt 文件。
 - 03-code-generation  代码生成，其对于从公共描述文件创建不同语言的源代码非常有用，使用变量或借助工具可以实现，本文只尝试了使用变量。
 - 04-static-analysis  静态分析，在不执行代码的情况下对代码进行分析。它可以用来发现常见的编程错误并执行编码准则。介绍了四种工具进行分析，本文只尝试使用了 clang-analyzer。
-- 05-unit-testing  单元测试是一个软件开发过程中应用程序的最小可测试部分，单元被单独和独立地检查是否正常运行。
-- 06-installer  
-- 07-package-management  
+- 05-unit-testing  单元测试是一个软件开发过程中应用程序的最小可测试部分，单元被单独和独立地检查是否正常运行。介绍了三种单元测试工具，本文尝试使用了 boost 和 googletest。
+- 06-installer  创建 deb 安装包。
+- 07-package-management  包管理。例如：使用系统提供的 “find_package()” 函数管理第三方库。
 
 # Other Links
 

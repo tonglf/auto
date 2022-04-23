@@ -1,13 +1,10 @@
-= Using System Provided Package Manager
-:toc:
-:toc-placement!:
-
-toc::[]
+# Using System Provided Package Manager
 
 # Introduction
 
-Using your system provided packages is one of the oldest and most common form of package management solutions. For this, you use your systems package installer (e.g. apt, yum) to install libraries and headers into common locations. CMake can then use the `find_package()` function to search for these and make them available to your program. 
+使用系统提供的包是最古老、最常见的包管理解决方案之一。为此，您可以使用系统包安装程序（例如apt、yum）将库和头安装到公共位置。然后，CMake可以使用 “find_package()” 函数来搜索这些文件，并将它们提供给您的程序。
 
 # Examples
 
-I have already shown how to do this in the link:https://github.com/ttroy50/cmake-examples/tree/master/01-basic/H-third-party-library[third party library] example from the basic section and the link:https://github.com/ttroy50/cmake-examples/tree/master/05-unit-testing/boost[boost unit test] example.
+我已经在基础部分的第三方库示例和boost单元测试示例中展示了如何做到这一点。
+
