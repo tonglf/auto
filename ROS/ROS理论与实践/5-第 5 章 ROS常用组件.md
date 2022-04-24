@@ -276,7 +276,7 @@ int main(int argc, char *argv[])
         {
             geometry_msgs::PointStamped point_base;
             point_base = buffer.transform(point_laser,"base_link");
-            ROS_INFO("转换后的数据:(%.2f,%.2f,%.2f),参考的坐标系是:%",point_base.point.x,point_base.point.y,point_base.point.z,point_base.header.frame_id.c_str());
+            ROS_INFO("转换后的数据:(%.2f,%.2f,%.2f),参考的坐标系是:%s",point_base.point.x,point_base.point.y,point_base.point.z,point_base.header.frame_id.c_str());
         }
         catch(const std::exception& e)
         {
@@ -1000,7 +1000,7 @@ if __name__ == "__main__":
 
 在机器人系统中，涉及的坐标系有多个，为了方便查看，ros 提供了专门的工具，可以用于生成显示坐标系关系的 pdf 文件，该文件包含树形结构的坐标系图谱。
 
-#### 6.1准备
+#### 1准备
 
 首先调用`rospack find tf2_tools`查看是否包含该功能包，如果没有，请使用如下命令安装:
 
@@ -1008,9 +1008,9 @@ if __name__ == "__main__":
 sudo apt install ros-noetic-tf2-tools
 ```
 
-#### 6.2使用
+#### 2使用
 
-##### 6.2.1生成 pdf 文件
+##### 2.1生成 pdf 文件
 
 启动坐标系广播程序之后，运行如下命令:
 
@@ -1027,7 +1027,7 @@ rosrun tf2_tools view_frames.py
 
 查看当前目录会生成一个 frames.pdf 文件
 
-##### 6.2.2查看文件
+##### 2.2查看文件
 
 可以直接进入目录打开文件，或者调用命令查看文件:`evince frames.pdf`
 
@@ -1086,12 +1086,12 @@ name: "turtle_flow"
 
 是通过话题 /乌龟名称/pose 来获取的
 
-```shell
-x: 1.0 //x坐标
-y: 1.0 //y坐标
-theta: -1.21437060833 //角度
-linear_velocity: 0.0 //线速度
-angular_velocity: 1.0 //角速度
+```bash
+x: 1.0 #x坐标
+y: 1.0 #y坐标
+theta: -1.21437060833 #角度
+linear_velocity: 0.0 #线速度
+angular_velocity: 1.0 #角速度
 ```
 
 ------
