@@ -1,12 +1,5 @@
 # README
 
-## SLAM
-
-- Frame
-    - LOAM
-    - LIO-SAM
-    - LeGo-LOAM
-
 ## ROS
 
 - ROS 理论与实践
