@@ -20,6 +20,11 @@
 - 矩阵分解
 - 非线性优化
 
+## Papers
+
+- F-LOAM
+- SC-F-LOAM
+
 ## notes
 
 随笔总结
