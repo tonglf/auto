@@ -262,7 +262,7 @@ laplacian算子：二阶微分算子，具有旋转不变性，容易受噪声�
 
 ![img](https://pic1.zhimg.com/80/v2-bd588deb6aa5b737aa8197241a012c54_720w.jpg)
 
-**23地图点的构建方法有哪些**
+**23 地图点的构建方法有哪些**
 
 （1）在ORB SLAM2中是根据三角化的方法确定地图点的，利用匹配好的两个点构建AX=b的方程，然后利用SVD分解取最小奇异值对应的特征向量作为地图点坐标，参考多视图几何总结——三角形法
 
@@ -325,68 +325,6 @@ Geman-MeClure核
 > source：[万字干货！视觉SLAM面试题汇总（19年秋招）——第二部分](https://zhuanlan.zhihu.com/p/212264860)
 
 **视觉SLAM总结——视觉SLAM面试题汇总（后26个）**
-
-\26. 除了RANSAC之外，还有什么鲁棒估计的方法？
-
-\27. 3D地图点是怎么存储的？表达方式？
-
-\28. 给你m相机n个点的bundle adjustment。当我们在仿真的时候，在迭代的时候，相机的位姿会很快的接近真值。而地图点却不能很快的收敛这是为什么呢？
-
-\29. LM算法里面那个λ是如何变化的呢？
-
-\30. 说一下3D空间的位姿如何去表达?
-
-\31. 李群和李代数的关系
-
-32.求导
-
-![img](https://pic3.zhimg.com/80/v2-6582b6b0f790156d3e340ce46fe56666_720w.png)
-
-
-
-\33. Mat是如何访问元素的？先访问行还是先访问列？
-
-\34. 写出单目相机的投影模型，畸变模型。
-
-\35. 安装2D lidar的平台匀速旋转的时候，去激光数据畸变，写代码
-
-\36. 给两组已经匹配好的3D点，计算相对位姿变换，写代码
-
-\37. ORB-SLAM初始化的时候为什么要同时计算H矩阵和F矩阵？
-
-\38. 说一下Dog-Leg算法
-
-\39. Vins-Mono里面什么是边缘化？First Estimate Jacobian？一致性？可观性？
-
-\40. 说一下VINS-Mono的优缺点
-
-41.导一下VINS-Mono里面的预积分公式
-
-42.给定一些有噪声的GPS信号的时候如何去精准的定位？
-
-43.何标定IMU与相机之间的外参数？
-
-44 给你xx误差的GPS，给你xx误差的惯导你怎么得到一个cm级别的地图?
-
-\45. 计算H矩阵和F矩阵的时候有什么技巧呢？
-
-\46. 给一组点云，从中提取平面。
-
-\47. 给一张图片，知道相机与地面之间的相对关系，计算出图的俯视图。
-
-\48. 双线性插值如何去做，写公式。
-
-\49. RGB-D的SLAM和RGB的SLAM有什么区别？
-
-50.什么是ORB特征? ORB特征的旋转不变性是如何做的? BRIEF算子是怎么提取的?
-
-51.ORB-SLAM中的特征是如何提取的？如何均匀化的？
-
-
-
-还是老规矩，先自己想，再看答案哟~^-^
-
-------
 
 **26. 除了RANSAC之外，还有什么鲁棒估计的方法？**
 
@@ -480,13 +418,67 @@ Mat访问像素一共有三种方法：使用at()方法、使用ptr()方法、�
 
 ![img](https://pic2.zhimg.com/80/v2-97f723922793adf21f4f0ac15fbc2171_720w.png)
 
+```cpp
+// source:毛星云《OpneCV3编程入门》https://github.com/QianMo/OpenCV3-Intro-Book-Src
+void colorReduce11(Mat &image, int div=64) {
+
+	  int nl= image.rows; //行数
+	  int nc= image.cols; //列数
+              
+      for (int j=0; j<nl; j++) 
+	  {
+          for (int i=0; i<nc; i++) 
+		  {
+ 
+            //-------------开始处理每个像素-------------------
+                 
+                  image.at<Vec3b>(j,i)[0]=	 image.at<Vec3b>(j,i)[0]/div*div + div/2;
+                  image.at<Vec3b>(j,i)[1]=	 image.at<Vec3b>(j,i)[1]/div*div + div/2;
+                  image.at<Vec3b>(j,i)[2]=	 image.at<Vec3b>(j,i)[2]/div*div + div/2;
+ 
+            //-------------结束像素处理------------------------
+ 
+            } //单行处理结束                 
+      }
+}
+```
+
 **（2）使用ptr()方法：** ptr()方法能够返回指定行的地址（因此正常是先访问行的），然后就可以移动指针访其他的像素。例如
 
 ![img](https://pic3.zhimg.com/80/v2-5ebe02cbe02acabe97a3188860ea7b66_720w.png)
 
 这里需要注意的是，有时候在内存中会为了对齐而对末尾的像素有填充，而有时候没有填充。可以使用isContinue()来访问图像是否有填充，对于没有填充的图像，即连续的图像来说，遍历的时候就可以只要一层循环就可以了，他会自己换行将图像变成一维的来处理。
 
-**（3）使用迭代器：**对Mat类型来说，他的迭代器类型可以使用MatIterator_或者Mat_::Iterator类型，具体使用如下
+```cpp
+void colorReduce0(Mat &image, int div=64) {
+
+    int nl= image.rows; //行数
+    int nc= image.cols * image.channels(); //每行元素的总元素数量
+
+    for (int j=0; j<nl; j++) 
+    {
+
+        uchar* data= image.ptr<uchar>(j);		// 获取第 j 行的首地址
+
+        for (int i=0; i<nc; i++) 
+        {
+
+            //-------------开始处理每个像素-------------------
+
+            data[i]= data[i]/div*div + div/2;		   // 1
+            *data++= *data/div*div + div/2;			// 2
+            *(data+i)= *data&mask + div/2;		   // 3
+	
+            //-------------结束像素处理------------------------
+
+        } //单行处理结束                  
+    }
+}
+```
+
+
+
+**（3）使用迭代器：**对Mat类型来说，他的迭代器类型可以使用MatIterator\_或者Mat_::Iterator类型，具体使用如下
 
 ![img](https://pic3.zhimg.com/80/v2-190758f4d2a0d265e3f140b8fb42e57a_720w.png)
 
@@ -495,6 +487,27 @@ Mat访问像素一共有三种方法：使用at()方法、使用ptr()方法、�
 ![img](https://pic2.zhimg.com/80/v2-108e88d2a8af9bb04bfac1cc198bd7cd_720w.png)
 
 遍历也和前面指针一样，从图像左上角第一个像素开始遍历三个字节，然后第二个字节，依次遍历，到第一行遍历完后，就会到第二行来遍历。
+
+```cpp
+void colorReduce10(Mat &image, int div=64) {
+
+	  //获取迭代器
+	  Mat_<Vec3b> cimage= image;
+	  Mat_<Vec3b>::iterator it=cimage.begin();
+	  Mat_<Vec3b>::iterator itend=cimage.end();
+
+	  for ( ; it!= itend; it++) { 
+        
+		//-------------开始处理每个像素-------------------
+
+        (*it)[0]= (*it)[0]/div*div + div/2;
+        (*it)[1]= (*it)[1]/div*div + div/2;
+        (*it)[2]= (*it)[2]/div*div + div/2;
+
+        //-------------结束像素处理------------------------
+	  }
+}
+```
 
 **（4）使用data指针：**用Mat存储一幅图像时，若图像在内存中是连续存储的（Mat对象的isContinuous == true），则可以将图像的数据看成是一个一维数组，而data（uchar*）成员就是指向图像数据的第一个字节的，因此可以用data指针访问图像的数据，从而加速Mat图像的访问速度。
 
@@ -1062,52 +1075,6 @@ ORB特征指的是Oriented FAST and rotated BREIF，包括改进后的FAST角点
 
 目前机器人SLAM问题是一个非常值得研究的方向，在未知环境中，首先要通过SLAM技术获得环境的地图，然后才能进行导航。这个方向是近几年比较新的研究方向，相关的机器人公司以及研究机器人的大厂也很需要SLAM方向的人才，比如大疆、美团、旷视科技等已经在这个行业有了一定的产品应用。在SLAM方向的面试中，总结的面试题如下：
 
-1.重定位和回环检测的区别是什么？
-
-2.单应矩阵H和基础矩阵F的区别是什么？
-
-3.视觉SLAM方法的分类和对应的特点分析。
-
-4.关键帧的作用是什么？
-
-5.如何选择关键帧？
-
-6.相机传感器的分类及其优缺点是什么？
-
-7.ROS中rosrun和roslaunch的区别是什么？
-
-8.请描述视觉SLAM的框架以及各个模块的作用是什么？
-
-9.SLAM中的绑架问题是什么？
-
-10.在视觉SLAM中可能用到有关的边缘检测算子有哪些？
-
-11.在SLAM中，如何对匹配好的点做进一步的处理，更好保证匹配效果？
-
-12.SLAM后端有滤波方法和非线性优化方法，这两种方法的优缺点是什么？
-
-13.什么是BA优化？
-
-14.描述一下RANSAC算法。
-
-15.相似变换、仿射变换、射影变换的区别是什么？
-
-16.ICP算法的原理是什么？简要叙述一下。
-
-17.四元数的相关概念是什么，请解释一下。
-
-18.激光SLAM中的具体方法有什么？请解释一下每种方法的特点。
-
-19.说明UKF，EKF和PF之间的关系。
-
-20.点云配准算法目前有哪些？
-
-建议大家先自己答题，再对照参考答案噢~
-
-\----------------------------------------------------------------
-
-**参考答案**
-
 **1.重定位和回环检测的区别是什么？**
 
 重定位是跟丢以后重新找回当前的姿态，通过当前帧和关键帧之间的特征匹配，定位当前帧的相机位姿。重定位就是重新定位，当前图像因为和最近的图像或者局部地图之间缺乏足够的匹配，导致机器人无法确定自己的位姿，此时处于当前状态的机器人不再知道其在地图中的位置，也叫做机器人被“绑架”，就说的是人质被蒙上双眼带到未知地方，蒙罩去掉后完全不知道自己在哪里，这时候就需要充分利用之前建好的地图或者存好的数据库。此时机器人需要观察周围环境，并且从已有地图中寻找可靠的匹配关系，一般是关键帧信息，这样就可以根据已有信息“重新”估计机器人的姿态。
@@ -1484,7 +1451,7 @@ KC算法应用了稳健统计和测量方法。Tsin和Kanade应用核密度估�
 
 > source：[自动驾驶面试题汇总（2022秋招题库）——持续更新](https://www.bilibili.com/read/cv13721554?spm_id_from=333.999.0.0)
 
-一、惯性导航方向
+**一、惯性导航方向**
 
 IMU测量方程是什么？噪声模型是什么？
 
@@ -1500,7 +1467,8 @@ DR递推的原理是什么？大概怎么去做？
 
 组合导航卡尔曼滤波过程噪声是如何调参的？
 
-二、点云算法方向
+**二、点云算法方向**
+
 最近邻问题有哪几种典型解法？
 
 怎么对KdTree进行插入操作？怎么确定一个节点的分类面？
@@ -1521,7 +1489,8 @@ DR递推的原理是什么？大概怎么去做？
 
 解释混合高斯模型含义。解释EM算法的原理。
 
-三、状态估计方向
+**三、状态估计方向**
+
 从贝叶斯滤波器角度推出卡尔曼滤波器方程。
 
 从增益最优化角度推出卡尔曼滤波器方程。
@@ -1567,13 +1536,14 @@ SVD是什么？SVD是如何求解的？
 
 22.解释四元数的更新与SO3的更新方式有何异同。
 
-23. 说明四元数运动模型与SO3运动模型之间的联系。
+23.说明四元数运动模型与SO3运动模型之间的联系。
 
-24. 解释高斯推断和概率学中边缘化之间的关系。解释边缘化与卡尔曼滤波器之间的关系。
+24.解释高斯推断和概率学中边缘化之间的关系。解释边缘化与卡尔曼滤波器之间的关系。
 
-25. 什么是M估计？说明M估计与核函数之间的关系？
+25.什么是M估计？说明M估计与核函数之间的关系？
 
-四、计算机视觉/VIO方向
+**四、计算机视觉/VIO方向**
+
 单应矩阵、基础矩阵、本质矩阵的定义？
 
 相机内参和外参的含义？如果将图像放大两倍，内外参如何变化？
@@ -1602,7 +1572,8 @@ SVD是什么？SVD是如何求解的？
 
 举出几种光流方法（LK，HS等）。说明LK光流的建模方式。
 
-五.C++方向
+**五.C++方向**
+
 C++函数指针有哪几类？函数指针、lambda、仿函数对象分别是什么？
 
 如何利用谓词对给定容器进行自定义排序？
@@ -1631,9 +1602,9 @@ std::unorded_map和std::map之间的差异是什么？
 
 traits是什么？什么时候用traits？
 
-
 参考答案（部分）
-一、惯性导航方向
+**一、惯性导航方向**
+
 1. IMU测量方程是什么？噪声模型是什么？
 
 中值积分的情况下，IMU的测量方程为：
@@ -1680,54 +1651,6 @@ DR，也叫航位推算，是在知道当前时刻位置的条件下，通过测
 ### 2022最新自动驾驶面试题汇总（持续更新中）
 
 > source：[深蓝学院：2022最新自动驾驶面试题汇总（持续更新中）](https://zhuanlan.zhihu.com/p/547586531)
-
-1.ROS的通信机制有哪些？
-
-2.BFS和DFS的区别是什么？
-
-3.进程的通信方式是什么？
-
-4.简述BN归一化的过程。
-
-5.自动驾驶汽车闯红灯的原因是什么？
-
-6.车道线检测的方法有哪些？
-
-7.自动驾驶中构建的地图都有哪些形式？
-
-8.自动驾驶中MPC控制的过程？
-
-9.目前的目标检测方法有哪些？
-
-10.描述车牌定位的具体过程。
-
-11.解释SSD算法目标检测的原理。
-
-12.描述ResNet的基本结构，其设计思想和优点是什么？
-
-13.介绍Adaboost的原理。
-
-14.多传感器之间是怎么对时的？
-
-15.说明IMU预积分理论。
-
-16.说明RANSAC算法的原理。
-
-17.简述A*路径规划方法的特点和基本原理。
-
-18.YOLO-v5算法的改进之处体现在哪里？
-
-19.目标检测中IOU的计算过程使用代码编程实现。
-
-20.简述PnP算法的基本步骤和原理。
-
-建议大家先自己答题，再对照参考答案噢~
-
-------
-
-我们正在整理更新最新的面试题库，特向大家征集3-5道在以往面试经历中遇到过的技术或非技术类题目，当然由于您的参与，这份面试题整理好后会第一时间免费给到您。
-
-[点击参与活动获取更多完整面试题](https://link.zhihu.com/?target=https%3A//www.shenlanxueyuan.com/launch/Z0197/detail)
 
 **参考答案**
 
@@ -2215,7 +2138,7 @@ YOLO V4使用 CIOU Loss作为bounding box的损失，与其他提到的方法相
 
 **19.目标检测中IOU的计算过程使用代码编程实现。**
 
-```text
+```cpp
 #include<iostream>
 #include<algorithm>
 #include<stdio.h>
@@ -2229,52 +2152,51 @@ YOLO V4使用 CIOU Loss作为bounding box的损失，与其他提到的方法相
 using namespace std;
 double calcS(vector<int> num)
 {
- return (num[2] - num[0])*(num[3] - num[1]);
+    return (num[2] - num[0])*(num[3] - num[1]);
 }
 vector<vector<double>> calcIOU(vector<vector<int>> &nums)
 {
- vector<vector<double>> res(nums.size(), vector<double>(nums.size(),0.0));
- for (int i = 0; i < nums.size(); ++i)
- {
- for (int j = i + 1; j < nums.size(); ++j)
- {
- int x1 = max(nums[i][0], nums[j][0]);
- int x2 = min(nums[i][2], nums[j][2]);
- int y1 = max(nums[i][1], nums[j][1]);
- int y2 = min(nums[i][3], nums[j][3]);
- double inter_square = (x2 - x1)*(y2 - y1);
- double union_square = calcS(nums[i]) + calcS(nums[j]) - inter_square;
- res[i][j] = inter_square / union_square;
- }
- }
- return res;
+    vector<vector<double>> res(nums.size(), vector<double>(nums.size(),0.0));
+    for (int i = 0; i < nums.size(); ++i)
+    {
+        for (int j = i + 1; j < nums.size(); ++j)
+        {
+            int x1 = max(nums[i][0], nums[j][0]);
+            int x2 = min(nums[i][2], nums[j][2]);
+            int y1 = max(nums[i][1], nums[j][1]);
+            int y2 = min(nums[i][3], nums[j][3]);
+            double inter_square = (x2 - x1)*(y2 - y1);
+            double union_square = calcS(nums[i]) + calcS(nums[j]) - inter_square;
+            res[i][j] = inter_square / union_square;
+        }
+    }
+    return res;
 } 
 int main()
 {
- vector<vector<int>> nums;
- vector<vector<double>> res;
- // 表示坐标位置，(x1,y1,x2,y2)，分别是左上角和右下角的坐标
- int a[3][4] = { { 3,6,9,11 },{ 6,3,8,7 },{ 3,7,10,12 } };
- for (int i = 0; i < 3; ++i)
- {
- vector<int> temp;
- for (int j = 0; j < 4; ++j)
- {
- temp.push_back(a[i][j]);
- }
- nums.push_back(temp);
- }
- res = calcIOU(nums);
- for (int i = 0; i < nums.size(); ++i)
- {
- for (int j = i + 1; j < nums.size(); ++j)
- cout << fixed << setprecision(3) <<res[i][j] << " ";
- }
- cout << endl;
- system("pause");
- return 0;
+    vector<vector<int>> nums;
+    vector<vector<double>> res;
+    // 表示坐标位置，(x1,y1,x2,y2)，分别是左上角和右下角的坐标
+    int a[3][4] = { { 3,6,9,11 },{ 6,3,8,7 },{ 3,7,10,12 } };
+    for (int i = 0; i < 3; ++i)
+    {
+        vector<int> temp;
+        for (int j = 0; j < 4; ++j)
+        {
+            temp.push_back(a[i][j]);
+        }
+        nums.push_back(temp);
+    }
+    res = calcIOU(nums);
+    for (int i = 0; i < nums.size(); ++i)
+    {
+        for (int j = i + 1; j < nums.size(); ++j)
+            cout << fixed << setprecision(3) <<res[i][j] << " ";
+    }
+    cout << endl;
+    system("pause");
+    return 0;
 }
- 
 ```
 
 **20.简述PnP算法的基本步骤和原理。**
