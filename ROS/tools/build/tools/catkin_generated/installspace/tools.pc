@@ -1,0 +1,8 @@
+prefix=/home/tong/work/tonglf/auto/ROS/tools/install
+
+Name: tools
+Description: Description of tools
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+tools
+-DCATKIN_DEVEL_PREFIX=/home/tong/work/tonglf/auto/ROS/tools/devel -DCMAKE_INSTALL_PREFIX=/home/tong/work/tonglf/auto/ROS/tools/install -G Unix Makefiles
