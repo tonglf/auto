@@ -43,3 +43,5 @@ roslaunch tools showpath.launch
 
 参考博客：[（九）ROS在rviz中实时显示轨迹（nav_msgs/Path消息的使用）](https://blog.csdn.net/ktigerhero3/article/details/70256437)
 
+### readrosbag
+todo
