@@ -1,0 +1,12 @@
+<launch>
+
+    <node pkg="tools" type="readrosbag" name="readrosbag" output="screen" required="true"> 
+
+        <param name="bag_path" value="/home/tong/work/allride/run/210928/2021-09-28-11-44-01.bag" />  
+        <param name="lidar_topic" value="/hesai_64_points" />  
+
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz"  args="-d $(find tools)/rviz/readrosbag.rviz" />
+
+</launch>

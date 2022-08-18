@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   tf
   pcl_conversions
+  rosbag
 )
 
 ## System dependencies are found with CMake's conventions
@@ -139,6 +140,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/tools_node.cpp)
 add_executable(showpath src/showpath.cpp)
+add_executable(readrosbag src/readrosbag.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -156,6 +158,9 @@ add_executable(showpath src/showpath.cpp)
 # )
 
 target_link_libraries(showpath
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(readrosbag
   ${catkin_LIBRARIES}
 )
 
