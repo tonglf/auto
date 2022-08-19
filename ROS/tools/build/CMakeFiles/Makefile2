@@ -136,6 +136,7 @@ gtest/googlemock/gtest/clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/c
 # Recursive "all" directory target.
 tools/all: tools/CMakeFiles/showpath.dir/all
 tools/all: tools/CMakeFiles/readrosbag.dir/all
+tools/all: tools/CMakeFiles/mergerosbag.dir/all
 .PHONY : tools/all
 
 # Recursive "preinstall" directory target.
@@ -211,6 +212,7 @@ tools/clean: tools/CMakeFiles/topic_tools_generate_messages_nodejs.dir/clean
 tools/clean: tools/CMakeFiles/topic_tools_generate_messages_py.dir/clean
 tools/clean: tools/CMakeFiles/showpath.dir/clean
 tools/clean: tools/CMakeFiles/readrosbag.dir/clean
+tools/clean: tools/CMakeFiles/mergerosbag.dir/clean
 .PHONY : tools/clean
 
 #=============================================================================
@@ -2170,7 +2172,7 @@ tools/CMakeFiles/topic_tools_generate_messages_py.dir/clean:
 tools/CMakeFiles/showpath.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/showpath.dir/build.make tools/CMakeFiles/showpath.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/showpath.dir/build.make tools/CMakeFiles/showpath.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=14,15 "Built target showpath"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=16,17 "Built target showpath"
 .PHONY : tools/CMakeFiles/showpath.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2196,7 +2198,7 @@ tools/CMakeFiles/showpath.dir/clean:
 tools/CMakeFiles/readrosbag.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readrosbag.dir/build.make tools/CMakeFiles/readrosbag.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readrosbag.dir/build.make tools/CMakeFiles/readrosbag.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=12,13 "Built target readrosbag"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=14,15 "Built target readrosbag"
 .PHONY : tools/CMakeFiles/readrosbag.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2214,6 +2216,32 @@ readrosbag: tools/CMakeFiles/readrosbag.dir/rule
 tools/CMakeFiles/readrosbag.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readrosbag.dir/build.make tools/CMakeFiles/readrosbag.dir/clean
 .PHONY : tools/CMakeFiles/readrosbag.dir/clean
+
+#=============================================================================
+# Target rules for target tools/CMakeFiles/mergerosbag.dir
+
+# All Build rule for target.
+tools/CMakeFiles/mergerosbag.dir/all:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/depend
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=12,13 "Built target mergerosbag"
+.PHONY : tools/CMakeFiles/mergerosbag.dir/all
+
+# Build rule for subdir invocation for target.
+tools/CMakeFiles/mergerosbag.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/mergerosbag.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles 0
+.PHONY : tools/CMakeFiles/mergerosbag.dir/rule
+
+# Convenience name for target.
+mergerosbag: tools/CMakeFiles/mergerosbag.dir/rule
+.PHONY : mergerosbag
+
+# clean rule for target.
+tools/CMakeFiles/mergerosbag.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/clean
+.PHONY : tools/CMakeFiles/mergerosbag.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,0 +1,7 @@
+
+bag_read_pcd_path: 
+bag_read_img_path: 
+bag_new_path: 
+
+lidar_topic: 
+image_topic: 

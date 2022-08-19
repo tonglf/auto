@@ -1123,6 +1123,44 @@ readrosbag/fast:
 	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readrosbag.dir/build.make tools/CMakeFiles/readrosbag.dir/build
 .PHONY : readrosbag/fast
 
+# Convenience name for target.
+tools/CMakeFiles/mergerosbag.dir/rule:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/mergerosbag.dir/rule
+.PHONY : tools/CMakeFiles/mergerosbag.dir/rule
+
+# Convenience name for target.
+mergerosbag: tools/CMakeFiles/mergerosbag.dir/rule
+.PHONY : mergerosbag
+
+# fast build rule for target.
+mergerosbag/fast:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/build
+.PHONY : mergerosbag/fast
+
+src/mergerosbag.o: src/mergerosbag.cpp.o
+.PHONY : src/mergerosbag.o
+
+# target to build an object file
+src/mergerosbag.cpp.o:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/src/mergerosbag.cpp.o
+.PHONY : src/mergerosbag.cpp.o
+
+src/mergerosbag.i: src/mergerosbag.cpp.i
+.PHONY : src/mergerosbag.i
+
+# target to preprocess a source file
+src/mergerosbag.cpp.i:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/src/mergerosbag.cpp.i
+.PHONY : src/mergerosbag.cpp.i
+
+src/mergerosbag.s: src/mergerosbag.cpp.s
+.PHONY : src/mergerosbag.s
+
+# target to generate assembly for a file
+src/mergerosbag.cpp.s:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/src/mergerosbag.cpp.s
+.PHONY : src/mergerosbag.cpp.s
+
 src/readrosbag.o: src/readrosbag.cpp.o
 .PHONY : src/readrosbag.o
 
@@ -1250,8 +1288,12 @@ help:
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... mergerosbag"
 	@echo "... readrosbag"
 	@echo "... showpath"
+	@echo "... src/mergerosbag.o"
+	@echo "... src/mergerosbag.i"
+	@echo "... src/mergerosbag.s"
 	@echo "... src/readrosbag.o"
 	@echo "... src/readrosbag.i"
 	@echo "... src/readrosbag.s"

@@ -347,4 +347,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "tools/CMakeFiles/topic_tools_generate_messages_py.dir/DependInfo.cmake"
   "tools/CMakeFiles/showpath.dir/DependInfo.cmake"
   "tools/CMakeFiles/readrosbag.dir/DependInfo.cmake"
+  "tools/CMakeFiles/mergerosbag.dir/DependInfo.cmake"
   )

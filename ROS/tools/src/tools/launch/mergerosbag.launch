@@ -1,0 +1,11 @@
+<launch>
+
+  <arg name = "yaml" default = "$(find tools)/yaml/mergerosbag.yaml"/>
+
+    <node pkg="tools" type="mergerosbag" name="mergerosbag" output="screen" required="true"> 
+
+        <rosparam command="load" file="$(arg yaml)" />
+
+    </node>
+
+</launch>

@@ -103,6 +103,7 @@
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/topic_tools_generate_messages_py.dir
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/showpath.dir
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/readrosbag.dir
+/home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/mergerosbag.dir
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/test.dir
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/edit_cache.dir
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/rebuild_cache.dir

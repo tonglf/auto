@@ -1172,6 +1172,19 @@ readrosbag/fast:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readrosbag.dir/build.make tools/CMakeFiles/readrosbag.dir/build
 .PHONY : readrosbag/fast
 
+#=============================================================================
+# Target rules for targets named mergerosbag
+
+# Build rule for target.
+mergerosbag: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mergerosbag
+.PHONY : mergerosbag
+
+# fast build rule for target.
+mergerosbag/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/build
+.PHONY : mergerosbag/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1260,6 +1273,7 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... mergerosbag"
 	@echo "... readrosbag"
 	@echo "... showpath"
 .PHONY : help
