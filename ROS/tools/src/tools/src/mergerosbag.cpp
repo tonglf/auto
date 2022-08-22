@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
     for (const rosbag::MessageInstance &m : view_pcd) {
         if (lidar_topic == m.getTopic()) {
             sensor_msgs::PointCloud2::ConstPtr msg = m.instantiate<sensor_msgs::PointCloud2>();
-            bag_new.write(m.getTopic(), ros::Time::now(), *msg);
+            bag_new.write(m.getTopic(), ros::Time::now(), *msg);      // 注意时间戳，否则同时写入两个数据，读取时无数据显示
         }
     }
 
