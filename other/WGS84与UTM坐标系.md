@@ -2,15 +2,23 @@
 
 ## 坐标系简介
 
-
-
 ### WGS84
 
+WGS84:World Geodetic System 1984，是为[GPS全球定位系统](https://baike.baidu.com/item/GPS全球定位系统/5864639?fromModule=lemma_inlink)使用而建立的[坐标系统](https://baike.baidu.com/item/坐标系统/4725756?fromModule=lemma_inlink)。通过遍布世界的[卫星观测站](https://baike.baidu.com/item/卫星观测站/22068811?fromModule=lemma_inlink)观测到的坐标建立，其初次WGS84的精度为1-2m。
 
+[WGS-84坐标系](https://baike.baidu.com/item/WGS-84坐标系?fromModule=lemma_inlink) [1] 的几何意义是：坐标系的原点位于地球质心，z轴指向（国际时间局）BIH1984.0定义的协议地球极(CTP)方向，x轴指向BIH1984.0的零度子午面和CTP赤道的交点，y轴通过右手规则确定。
+
+来源：百度百科
 
 ### UTM
 
+UTM(Universal Transverse Mercator Grid System, 通用横墨卡托网格系统)，坐标是一种平面直角坐标，这种坐标格网系统及其所依据的投影已经广泛用于地形图，作为卫星影像和自然资源数据库的参考格网以及要求精确定位的其他应用。
 
+参考：
+
+1. [什么是UTM坐标系](https://zhuanlan.zhihu.com/p/99772254)
+2. [UTM坐标系简述](https://zhuanlan.zhihu.com/p/255036625)
+3. [卫星遥感影像中常见的WGS84 UTM坐标系](http://www.zj-view.com/newsitem/278062789/)
 
 ## 坐标系转换
 
