@@ -1124,6 +1124,20 @@ readrosbag/fast:
 .PHONY : readrosbag/fast
 
 # Convenience name for target.
+tools/CMakeFiles/readImage.dir/rule:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/readImage.dir/rule
+.PHONY : tools/CMakeFiles/readImage.dir/rule
+
+# Convenience name for target.
+readImage: tools/CMakeFiles/readImage.dir/rule
+.PHONY : readImage
+
+# fast build rule for target.
+readImage/fast:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readImage.dir/build.make tools/CMakeFiles/readImage.dir/build
+.PHONY : readImage/fast
+
+# Convenience name for target.
 tools/CMakeFiles/mergerosbag.dir/rule:
 	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/mergerosbag.dir/rule
 .PHONY : tools/CMakeFiles/mergerosbag.dir/rule
@@ -1136,6 +1150,20 @@ mergerosbag: tools/CMakeFiles/mergerosbag.dir/rule
 mergerosbag/fast:
 	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/build
 .PHONY : mergerosbag/fast
+
+# Convenience name for target.
+tools/CMakeFiles/viewPCD.dir/rule:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/viewPCD.dir/rule
+.PHONY : tools/CMakeFiles/viewPCD.dir/rule
+
+# Convenience name for target.
+viewPCD: tools/CMakeFiles/viewPCD.dir/rule
+.PHONY : viewPCD
+
+# fast build rule for target.
+viewPCD/fast:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/viewPCD.dir/build.make tools/CMakeFiles/viewPCD.dir/build
+.PHONY : viewPCD/fast
 
 src/mergerosbag.o: src/mergerosbag.cpp.o
 .PHONY : src/mergerosbag.o
@@ -1160,6 +1188,30 @@ src/mergerosbag.s: src/mergerosbag.cpp.s
 src/mergerosbag.cpp.s:
 	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/src/mergerosbag.cpp.s
 .PHONY : src/mergerosbag.cpp.s
+
+src/readImage.o: src/readImage.cpp.o
+.PHONY : src/readImage.o
+
+# target to build an object file
+src/readImage.cpp.o:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readImage.dir/build.make tools/CMakeFiles/readImage.dir/src/readImage.cpp.o
+.PHONY : src/readImage.cpp.o
+
+src/readImage.i: src/readImage.cpp.i
+.PHONY : src/readImage.i
+
+# target to preprocess a source file
+src/readImage.cpp.i:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readImage.dir/build.make tools/CMakeFiles/readImage.dir/src/readImage.cpp.i
+.PHONY : src/readImage.cpp.i
+
+src/readImage.s: src/readImage.cpp.s
+.PHONY : src/readImage.s
+
+# target to generate assembly for a file
+src/readImage.cpp.s:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readImage.dir/build.make tools/CMakeFiles/readImage.dir/src/readImage.cpp.s
+.PHONY : src/readImage.cpp.s
 
 src/readrosbag.o: src/readrosbag.cpp.o
 .PHONY : src/readrosbag.o
@@ -1208,6 +1260,30 @@ src/showpath.s: src/showpath.cpp.s
 src/showpath.cpp.s:
 	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/showpath.dir/build.make tools/CMakeFiles/showpath.dir/src/showpath.cpp.s
 .PHONY : src/showpath.cpp.s
+
+src/viewPCD.o: src/viewPCD.cpp.o
+.PHONY : src/viewPCD.o
+
+# target to build an object file
+src/viewPCD.cpp.o:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/viewPCD.dir/build.make tools/CMakeFiles/viewPCD.dir/src/viewPCD.cpp.o
+.PHONY : src/viewPCD.cpp.o
+
+src/viewPCD.i: src/viewPCD.cpp.i
+.PHONY : src/viewPCD.i
+
+# target to preprocess a source file
+src/viewPCD.cpp.i:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/viewPCD.dir/build.make tools/CMakeFiles/viewPCD.dir/src/viewPCD.cpp.i
+.PHONY : src/viewPCD.cpp.i
+
+src/viewPCD.s: src/viewPCD.cpp.s
+.PHONY : src/viewPCD.s
+
+# target to generate assembly for a file
+src/viewPCD.cpp.s:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/viewPCD.dir/build.make tools/CMakeFiles/viewPCD.dir/src/viewPCD.cpp.s
+.PHONY : src/viewPCD.cpp.s
 
 # Help Target
 help:
@@ -1289,17 +1365,25 @@ help:
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... mergerosbag"
+	@echo "... readImage"
 	@echo "... readrosbag"
 	@echo "... showpath"
+	@echo "... viewPCD"
 	@echo "... src/mergerosbag.o"
 	@echo "... src/mergerosbag.i"
 	@echo "... src/mergerosbag.s"
+	@echo "... src/readImage.o"
+	@echo "... src/readImage.i"
+	@echo "... src/readImage.s"
 	@echo "... src/readrosbag.o"
 	@echo "... src/readrosbag.i"
 	@echo "... src/readrosbag.s"
 	@echo "... src/showpath.o"
 	@echo "... src/showpath.i"
 	@echo "... src/showpath.s"
+	@echo "... src/viewPCD.o"
+	@echo "... src/viewPCD.i"
+	@echo "... src/viewPCD.s"
 .PHONY : help
 
 

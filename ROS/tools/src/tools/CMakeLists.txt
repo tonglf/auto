@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   std_msgs
   tf
+  cv_bridge
   pcl_conversions
   rosbag
 )
@@ -141,7 +142,9 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/tools_node.cpp)
 add_executable(showpath src/showpath.cpp)
 add_executable(readrosbag src/readrosbag.cpp)
+add_executable(readImage src/readImage.cpp)
 add_executable(mergerosbag src/mergerosbag.cpp)
+add_executable(viewPCD src/viewPCD.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -164,10 +167,15 @@ target_link_libraries(showpath
 target_link_libraries(readrosbag
   ${catkin_LIBRARIES}
 )
+target_link_libraries(readImage
+  ${catkin_LIBRARIES}
+)
 target_link_libraries(mergerosbag
   ${catkin_LIBRARIES}
 )
-
+target_link_libraries(viewPCD
+  ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############

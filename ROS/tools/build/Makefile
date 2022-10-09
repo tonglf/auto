@@ -1173,6 +1173,19 @@ readrosbag/fast:
 .PHONY : readrosbag/fast
 
 #=============================================================================
+# Target rules for targets named readImage
+
+# Build rule for target.
+readImage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 readImage
+.PHONY : readImage
+
+# fast build rule for target.
+readImage/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readImage.dir/build.make tools/CMakeFiles/readImage.dir/build
+.PHONY : readImage/fast
+
+#=============================================================================
 # Target rules for targets named mergerosbag
 
 # Build rule for target.
@@ -1184,6 +1197,19 @@ mergerosbag: cmake_check_build_system
 mergerosbag/fast:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/mergerosbag.dir/build.make tools/CMakeFiles/mergerosbag.dir/build
 .PHONY : mergerosbag/fast
+
+#=============================================================================
+# Target rules for targets named viewPCD
+
+# Build rule for target.
+viewPCD: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 viewPCD
+.PHONY : viewPCD
+
+# fast build rule for target.
+viewPCD/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/viewPCD.dir/build.make tools/CMakeFiles/viewPCD.dir/build
+.PHONY : viewPCD/fast
 
 # Help Target
 help:
@@ -1274,8 +1300,10 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... mergerosbag"
+	@echo "... readImage"
 	@echo "... readrosbag"
 	@echo "... showpath"
+	@echo "... viewPCD"
 .PHONY : help
 
 

@@ -1,0 +1,11 @@
+<launch>
+
+    <node pkg="tools" type="readImage" name="readImage" output="screen" required="true"> 
+
+        <param name="bag_path" value="/home/tong/work/allride/data/20220916sy_monitor/id6006_2022-09-16-10-59-14.bag" />  
+        <param name="image_topic" value="/pylon_sweepfront/image_raw" />  
+        <param name="image_output_path" value="/home/tong/work/allride/data/20220916sy_monitor/image/" />  
+
+    </node>
+
+</launch>

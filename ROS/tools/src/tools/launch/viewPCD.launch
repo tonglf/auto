@@ -1,0 +1,11 @@
+<launch>
+
+    <node pkg="tools" type="viewPCD" name="viewPCD" output="screen" required="true"> 
+
+        <param name="cloud_path" value="/home/tong/work/allride/data/20220916sy_monitor/image/SFM_pointcloud.pcd" />  
+
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz"  args="-d $(find tools)/rviz/viewPCD.rviz" />
+
+</launch>

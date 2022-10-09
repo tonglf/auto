@@ -97,6 +97,10 @@ readrosbag_EXTERNAL_OBJECTS =
 /home/tong/work/tonglf/auto/ROS/tools/devel/lib/tools/readrosbag: /opt/ros/melodic/lib/libactionlib.so
 /home/tong/work/tonglf/auto/ROS/tools/devel/lib/tools/readrosbag: /opt/ros/melodic/lib/libmessage_filters.so
 /home/tong/work/tonglf/auto/ROS/tools/devel/lib/tools/readrosbag: /opt/ros/melodic/lib/libtf2.so
+/home/tong/work/tonglf/auto/ROS/tools/devel/lib/tools/readrosbag: /opt/ros/melodic/lib/libcv_bridge.so
+/home/tong/work/tonglf/auto/ROS/tools/devel/lib/tools/readrosbag: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
+/home/tong/work/tonglf/auto/ROS/tools/devel/lib/tools/readrosbag: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
+/home/tong/work/tonglf/auto/ROS/tools/devel/lib/tools/readrosbag: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0
 /home/tong/work/tonglf/auto/ROS/tools/devel/lib/tools/readrosbag: /usr/lib/x86_64-linux-gnu/libpcl_common.so
 /home/tong/work/tonglf/auto/ROS/tools/devel/lib/tools/readrosbag: /usr/lib/x86_64-linux-gnu/libpcl_octree.so
 /home/tong/work/tonglf/auto/ROS/tools/devel/lib/tools/readrosbag: /usr/lib/x86_64-linux-gnu/libpcl_io.so
