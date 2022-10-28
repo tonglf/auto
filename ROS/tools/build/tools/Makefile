@@ -1165,6 +1165,20 @@ viewPCD/fast:
 	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/viewPCD.dir/build.make tools/CMakeFiles/viewPCD.dir/build
 .PHONY : viewPCD/fast
 
+# Convenience name for target.
+tools/CMakeFiles/writeImage.dir/rule:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/writeImage.dir/rule
+.PHONY : tools/CMakeFiles/writeImage.dir/rule
+
+# Convenience name for target.
+writeImage: tools/CMakeFiles/writeImage.dir/rule
+.PHONY : writeImage
+
+# fast build rule for target.
+writeImage/fast:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/build
+.PHONY : writeImage/fast
+
 src/mergerosbag.o: src/mergerosbag.cpp.o
 .PHONY : src/mergerosbag.o
 
@@ -1285,6 +1299,30 @@ src/viewPCD.cpp.s:
 	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/viewPCD.dir/build.make tools/CMakeFiles/viewPCD.dir/src/viewPCD.cpp.s
 .PHONY : src/viewPCD.cpp.s
 
+src/writeImage.o: src/writeImage.cpp.o
+.PHONY : src/writeImage.o
+
+# target to build an object file
+src/writeImage.cpp.o:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/src/writeImage.cpp.o
+.PHONY : src/writeImage.cpp.o
+
+src/writeImage.i: src/writeImage.cpp.i
+.PHONY : src/writeImage.i
+
+# target to preprocess a source file
+src/writeImage.cpp.i:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/src/writeImage.cpp.i
+.PHONY : src/writeImage.cpp.i
+
+src/writeImage.s: src/writeImage.cpp.s
+.PHONY : src/writeImage.s
+
+# target to generate assembly for a file
+src/writeImage.cpp.s:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/src/writeImage.cpp.s
+.PHONY : src/writeImage.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1369,6 +1407,7 @@ help:
 	@echo "... readrosbag"
 	@echo "... showpath"
 	@echo "... viewPCD"
+	@echo "... writeImage"
 	@echo "... src/mergerosbag.o"
 	@echo "... src/mergerosbag.i"
 	@echo "... src/mergerosbag.s"
@@ -1384,6 +1423,9 @@ help:
 	@echo "... src/viewPCD.o"
 	@echo "... src/viewPCD.i"
 	@echo "... src/viewPCD.s"
+	@echo "... src/writeImage.o"
+	@echo "... src/writeImage.i"
+	@echo "... src/writeImage.s"
 .PHONY : help
 
 

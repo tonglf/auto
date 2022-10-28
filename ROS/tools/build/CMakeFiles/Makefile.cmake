@@ -353,4 +353,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "tools/CMakeFiles/readImage.dir/DependInfo.cmake"
   "tools/CMakeFiles/mergerosbag.dir/DependInfo.cmake"
   "tools/CMakeFiles/viewPCD.dir/DependInfo.cmake"
+  "tools/CMakeFiles/writeImage.dir/DependInfo.cmake"
   )

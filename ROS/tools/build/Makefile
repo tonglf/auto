@@ -1211,6 +1211,19 @@ viewPCD/fast:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/viewPCD.dir/build.make tools/CMakeFiles/viewPCD.dir/build
 .PHONY : viewPCD/fast
 
+#=============================================================================
+# Target rules for targets named writeImage
+
+# Build rule for target.
+writeImage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 writeImage
+.PHONY : writeImage
+
+# fast build rule for target.
+writeImage/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/build
+.PHONY : writeImage/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1304,6 +1317,7 @@ help:
 	@echo "... readrosbag"
 	@echo "... showpath"
 	@echo "... viewPCD"
+	@echo "... writeImage"
 .PHONY : help
 
 
