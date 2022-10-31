@@ -2,9 +2,10 @@
 
     <node pkg="tools" type="writeImage" name="writeImage" output="screen" required="true"> 
 
-        <param name="bag_path" value="/home/tong/test/loc_lane_bus_wy_2022-10-27-21-08-40.bag" />  
-        <param name="image_topic" value="/lane_detection/vis/cam_rgt/compressed" />  
-        <param name="image_output_path" value="/home/tong/test/images/wy/" />  
+        <param name="compressed" value="false" />  
+        <param name="bag_path" value="/home/tong/test/loc_lane_bus_qlE_2022-10-27-20-53-16.bag" />  
+        <param name="image_topic" value="/cam_rgt" />  
+        <param name="image_output_path" value="/home/tong/test/images/raw/qlE/" />  
 
     </node>
 
