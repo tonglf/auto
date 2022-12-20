@@ -1,0 +1,13 @@
+<launch>
+
+    <node pkg="tools" type="writeRosbag" name="writeRosbag" output="screen" required="true"> 
+
+        <param name="bag_read_file" value="/home/tong/work/explore/data/allride/id6006_2022-09-16-11-37-27.bag" />  
+        <param name="bag_write_file" value="/home/tong/work/explore/data/allride/pose_tracking.bag" />  
+        <param name="topic" value="/pylon_sweepfront/image_raw" />  
+        <param name="loop" value="200" />  
+        <param name="cnt" value="10" />  
+
+    </node>
+
+</launch>

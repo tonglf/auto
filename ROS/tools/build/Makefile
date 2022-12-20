@@ -1224,6 +1224,32 @@ writeImage/fast:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/build
 .PHONY : writeImage/fast
 
+#=============================================================================
+# Target rules for targets named writeRosbag
+
+# Build rule for target.
+writeRosbag: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 writeRosbag
+.PHONY : writeRosbag
+
+# fast build rule for target.
+writeRosbag/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeRosbag.dir/build.make tools/CMakeFiles/writeRosbag.dir/build
+.PHONY : writeRosbag/fast
+
+#=============================================================================
+# Target rules for targets named savePcd
+
+# Build rule for target.
+savePcd: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 savePcd
+.PHONY : savePcd
+
+# fast build rule for target.
+savePcd/fast:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/savePcd.dir/build.make tools/CMakeFiles/savePcd.dir/build
+.PHONY : savePcd/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1315,9 +1341,11 @@ help:
 	@echo "... mergerosbag"
 	@echo "... readImage"
 	@echo "... readrosbag"
+	@echo "... savePcd"
 	@echo "... showpath"
 	@echo "... viewPCD"
 	@echo "... writeImage"
+	@echo "... writeRosbag"
 .PHONY : help
 
 

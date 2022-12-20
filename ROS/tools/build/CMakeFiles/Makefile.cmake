@@ -354,4 +354,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "tools/CMakeFiles/mergerosbag.dir/DependInfo.cmake"
   "tools/CMakeFiles/viewPCD.dir/DependInfo.cmake"
   "tools/CMakeFiles/writeImage.dir/DependInfo.cmake"
+  "tools/CMakeFiles/writeRosbag.dir/DependInfo.cmake"
+  "tools/CMakeFiles/savePcd.dir/DependInfo.cmake"
   )

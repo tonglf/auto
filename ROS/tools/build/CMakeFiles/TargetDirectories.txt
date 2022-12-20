@@ -107,6 +107,8 @@
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/mergerosbag.dir
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/viewPCD.dir
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/writeImage.dir
+/home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/writeRosbag.dir
+/home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/savePcd.dir
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/test.dir
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/edit_cache.dir
 /home/tong/work/tonglf/auto/ROS/tools/build/tools/CMakeFiles/rebuild_cache.dir

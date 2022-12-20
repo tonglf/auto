@@ -1,0 +1,13 @@
+<launch>
+
+    <node pkg="tools" type="savePcd" name="savePcd" output="screen" required="true"> 
+
+        <param name="bag_path" value="/home/tong/work/explore/data/allride/id6006_2022-09-16-11-37-27.bag" />  
+        <param name="pcd_path" value="/home/tong/work/explore/data/allride/pose_tracking.pcd" />  
+        <param name="lidar_topic" value="/rslidar_points" />  
+        <param name="frame" value="20" />  
+        <param name="x_maxRange" value="100" />  
+
+    </node>
+
+</launch>

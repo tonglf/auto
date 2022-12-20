@@ -1179,6 +1179,34 @@ writeImage/fast:
 	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/build
 .PHONY : writeImage/fast
 
+# Convenience name for target.
+tools/CMakeFiles/writeRosbag.dir/rule:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/writeRosbag.dir/rule
+.PHONY : tools/CMakeFiles/writeRosbag.dir/rule
+
+# Convenience name for target.
+writeRosbag: tools/CMakeFiles/writeRosbag.dir/rule
+.PHONY : writeRosbag
+
+# fast build rule for target.
+writeRosbag/fast:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeRosbag.dir/build.make tools/CMakeFiles/writeRosbag.dir/build
+.PHONY : writeRosbag/fast
+
+# Convenience name for target.
+tools/CMakeFiles/savePcd.dir/rule:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/savePcd.dir/rule
+.PHONY : tools/CMakeFiles/savePcd.dir/rule
+
+# Convenience name for target.
+savePcd: tools/CMakeFiles/savePcd.dir/rule
+.PHONY : savePcd
+
+# fast build rule for target.
+savePcd/fast:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/savePcd.dir/build.make tools/CMakeFiles/savePcd.dir/build
+.PHONY : savePcd/fast
+
 src/mergerosbag.o: src/mergerosbag.cpp.o
 .PHONY : src/mergerosbag.o
 
@@ -1251,6 +1279,30 @@ src/readrosbag.cpp.s:
 	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/readrosbag.dir/build.make tools/CMakeFiles/readrosbag.dir/src/readrosbag.cpp.s
 .PHONY : src/readrosbag.cpp.s
 
+src/savePcd.o: src/savePcd.cpp.o
+.PHONY : src/savePcd.o
+
+# target to build an object file
+src/savePcd.cpp.o:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/savePcd.dir/build.make tools/CMakeFiles/savePcd.dir/src/savePcd.cpp.o
+.PHONY : src/savePcd.cpp.o
+
+src/savePcd.i: src/savePcd.cpp.i
+.PHONY : src/savePcd.i
+
+# target to preprocess a source file
+src/savePcd.cpp.i:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/savePcd.dir/build.make tools/CMakeFiles/savePcd.dir/src/savePcd.cpp.i
+.PHONY : src/savePcd.cpp.i
+
+src/savePcd.s: src/savePcd.cpp.s
+.PHONY : src/savePcd.s
+
+# target to generate assembly for a file
+src/savePcd.cpp.s:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/savePcd.dir/build.make tools/CMakeFiles/savePcd.dir/src/savePcd.cpp.s
+.PHONY : src/savePcd.cpp.s
+
 src/showpath.o: src/showpath.cpp.o
 .PHONY : src/showpath.o
 
@@ -1322,6 +1374,30 @@ src/writeImage.s: src/writeImage.cpp.s
 src/writeImage.cpp.s:
 	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/src/writeImage.cpp.s
 .PHONY : src/writeImage.cpp.s
+
+src/writeRosbag.o: src/writeRosbag.cpp.o
+.PHONY : src/writeRosbag.o
+
+# target to build an object file
+src/writeRosbag.cpp.o:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeRosbag.dir/build.make tools/CMakeFiles/writeRosbag.dir/src/writeRosbag.cpp.o
+.PHONY : src/writeRosbag.cpp.o
+
+src/writeRosbag.i: src/writeRosbag.cpp.i
+.PHONY : src/writeRosbag.i
+
+# target to preprocess a source file
+src/writeRosbag.cpp.i:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeRosbag.dir/build.make tools/CMakeFiles/writeRosbag.dir/src/writeRosbag.cpp.i
+.PHONY : src/writeRosbag.cpp.i
+
+src/writeRosbag.s: src/writeRosbag.cpp.s
+.PHONY : src/writeRosbag.s
+
+# target to generate assembly for a file
+src/writeRosbag.cpp.s:
+	cd /home/tong/work/tonglf/auto/ROS/tools/build && $(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeRosbag.dir/build.make tools/CMakeFiles/writeRosbag.dir/src/writeRosbag.cpp.s
+.PHONY : src/writeRosbag.cpp.s
 
 # Help Target
 help:
@@ -1405,9 +1481,11 @@ help:
 	@echo "... mergerosbag"
 	@echo "... readImage"
 	@echo "... readrosbag"
+	@echo "... savePcd"
 	@echo "... showpath"
 	@echo "... viewPCD"
 	@echo "... writeImage"
+	@echo "... writeRosbag"
 	@echo "... src/mergerosbag.o"
 	@echo "... src/mergerosbag.i"
 	@echo "... src/mergerosbag.s"
@@ -1417,6 +1495,9 @@ help:
 	@echo "... src/readrosbag.o"
 	@echo "... src/readrosbag.i"
 	@echo "... src/readrosbag.s"
+	@echo "... src/savePcd.o"
+	@echo "... src/savePcd.i"
+	@echo "... src/savePcd.s"
 	@echo "... src/showpath.o"
 	@echo "... src/showpath.i"
 	@echo "... src/showpath.s"
@@ -1426,6 +1507,9 @@ help:
 	@echo "... src/writeImage.o"
 	@echo "... src/writeImage.i"
 	@echo "... src/writeImage.s"
+	@echo "... src/writeRosbag.o"
+	@echo "... src/writeRosbag.i"
+	@echo "... src/writeRosbag.s"
 .PHONY : help
 
 

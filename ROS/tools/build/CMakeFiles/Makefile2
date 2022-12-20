@@ -140,6 +140,8 @@ tools/all: tools/CMakeFiles/readImage.dir/all
 tools/all: tools/CMakeFiles/mergerosbag.dir/all
 tools/all: tools/CMakeFiles/viewPCD.dir/all
 tools/all: tools/CMakeFiles/writeImage.dir/all
+tools/all: tools/CMakeFiles/writeRosbag.dir/all
+tools/all: tools/CMakeFiles/savePcd.dir/all
 .PHONY : tools/all
 
 # Recursive "preinstall" directory target.
@@ -219,6 +221,8 @@ tools/clean: tools/CMakeFiles/readImage.dir/clean
 tools/clean: tools/CMakeFiles/mergerosbag.dir/clean
 tools/clean: tools/CMakeFiles/viewPCD.dir/clean
 tools/clean: tools/CMakeFiles/writeImage.dir/clean
+tools/clean: tools/CMakeFiles/writeRosbag.dir/clean
+tools/clean: tools/CMakeFiles/savePcd.dir/clean
 .PHONY : tools/clean
 
 #=============================================================================
@@ -2178,7 +2182,7 @@ tools/CMakeFiles/topic_tools_generate_messages_py.dir/clean:
 tools/CMakeFiles/showpath.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/showpath.dir/build.make tools/CMakeFiles/showpath.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/showpath.dir/build.make tools/CMakeFiles/showpath.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=18,19 "Built target showpath"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=20,21 "Built target showpath"
 .PHONY : tools/CMakeFiles/showpath.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2282,7 +2286,7 @@ tools/CMakeFiles/mergerosbag.dir/clean:
 tools/CMakeFiles/viewPCD.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/viewPCD.dir/build.make tools/CMakeFiles/viewPCD.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/viewPCD.dir/build.make tools/CMakeFiles/viewPCD.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=20,21 "Built target viewPCD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=22,23 "Built target viewPCD"
 .PHONY : tools/CMakeFiles/viewPCD.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2308,7 +2312,7 @@ tools/CMakeFiles/viewPCD.dir/clean:
 tools/CMakeFiles/writeImage.dir/all:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=22,23 "Built target writeImage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=24,25 "Built target writeImage"
 .PHONY : tools/CMakeFiles/writeImage.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2326,6 +2330,58 @@ writeImage: tools/CMakeFiles/writeImage.dir/rule
 tools/CMakeFiles/writeImage.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeImage.dir/build.make tools/CMakeFiles/writeImage.dir/clean
 .PHONY : tools/CMakeFiles/writeImage.dir/clean
+
+#=============================================================================
+# Target rules for target tools/CMakeFiles/writeRosbag.dir
+
+# All Build rule for target.
+tools/CMakeFiles/writeRosbag.dir/all:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeRosbag.dir/build.make tools/CMakeFiles/writeRosbag.dir/depend
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeRosbag.dir/build.make tools/CMakeFiles/writeRosbag.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=26,27 "Built target writeRosbag"
+.PHONY : tools/CMakeFiles/writeRosbag.dir/all
+
+# Build rule for subdir invocation for target.
+tools/CMakeFiles/writeRosbag.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/writeRosbag.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles 0
+.PHONY : tools/CMakeFiles/writeRosbag.dir/rule
+
+# Convenience name for target.
+writeRosbag: tools/CMakeFiles/writeRosbag.dir/rule
+.PHONY : writeRosbag
+
+# clean rule for target.
+tools/CMakeFiles/writeRosbag.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/writeRosbag.dir/build.make tools/CMakeFiles/writeRosbag.dir/clean
+.PHONY : tools/CMakeFiles/writeRosbag.dir/clean
+
+#=============================================================================
+# Target rules for target tools/CMakeFiles/savePcd.dir
+
+# All Build rule for target.
+tools/CMakeFiles/savePcd.dir/all:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/savePcd.dir/build.make tools/CMakeFiles/savePcd.dir/depend
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/savePcd.dir/build.make tools/CMakeFiles/savePcd.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles --progress-num=18,19 "Built target savePcd"
+.PHONY : tools/CMakeFiles/savePcd.dir/all
+
+# Build rule for subdir invocation for target.
+tools/CMakeFiles/savePcd.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/savePcd.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tong/work/tonglf/auto/ROS/tools/build/CMakeFiles 0
+.PHONY : tools/CMakeFiles/savePcd.dir/rule
+
+# Convenience name for target.
+savePcd: tools/CMakeFiles/savePcd.dir/rule
+.PHONY : savePcd
+
+# clean rule for target.
+tools/CMakeFiles/savePcd.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/savePcd.dir/build.make tools/CMakeFiles/savePcd.dir/clean
+.PHONY : tools/CMakeFiles/savePcd.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

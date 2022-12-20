@@ -146,6 +146,8 @@ add_executable(readImage src/readImage.cpp)
 add_executable(mergerosbag src/mergerosbag.cpp)
 add_executable(viewPCD src/viewPCD.cpp)
 add_executable(writeImage src/writeImage.cpp)
+add_executable(writeRosbag src/writeRosbag.cpp)
+add_executable(savePcd src/savePcd.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -178,6 +180,12 @@ target_link_libraries(mergerosbag
   ${catkin_LIBRARIES}
 )
 target_link_libraries(viewPCD
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(writeRosbag
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(savePcd
   ${catkin_LIBRARIES}
 )
 #############
