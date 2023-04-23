@@ -249,9 +249,9 @@ rosdep update
 
 ------
 
-但是，在 rosdep 初始化时，多半会抛出异常。
+但是，在 rosdep 初始化以及 update 时，多半会抛出异常，下面有两个常见问题：
 
-**问题:**![img](Image/1-11noetic异常提示.PNG)
+**问题1:**![img](Image/1-11noetic异常提示.PNG)
 
 **原因:**
 
@@ -289,6 +289,17 @@ rosdep update
 ```
 
 就可以正常实现 rosdep 的初始化与更新了。
+
+**问题2：更新时有错误产生**
+
+```shell
+ERROR: error loading sources list:
+	('The read operation timed out',)
+```
+
+**原因：** 一些链接失效。
+
+**解决：** 参考博客：[rosdep update遇到ERROR: error loading sources list: The read operation timed out问题](https://blog.csdn.net/DDonggggg/article/details/115798335)  解决方法1。
 
 ### 1.2.5 测试 ROS
 
